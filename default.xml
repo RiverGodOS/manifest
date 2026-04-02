@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+     RiverGod OS - Manifest
+     Based on AOSP Android 13 / LineageOS 20
+-->
+<manifest>
+
+  <!-- AOSP base remotes -->
+  <remote name="aosp"
+          fetch="https://android.googlesource.com"
+          review="https://android-review.googlesource.com" />
+
+  <remote name="github"
+          fetch="https://github.com" />
+
+  <remote name="lineage"
+          fetch="https://github.com/LineageOS" />
+
+  <remote name="rivergod"
+          fetch="https://github.com/RiverGodOS" />
+
+  <!-- Default: AOSP Android 13 -->
+  <default revision="refs/tags/android-13.0.0_r83"
+           remote="aosp"
+           sync-j="4"
+           sync-c="true" />
+
+  <!-- ===================== AOSP CORE ===================== -->
+  <project path="art" name="platform/art" />
+  <project path="bionic" name="platform/bionic" />
+  <project path="bootable/recovery" name="platform/bootable/recovery" />
+  <project path="build/blueprint" name="platform/build/blueprint" />
+  <project path="build/kati" name="platform/build/kati" />
+  <project path="build/make" name="platform/build/make" />
+  <project path="build/soong" name="platform/build/soong" />
+  <project path="cts" name="platform/cts" />
+  <project path="dalvik" name="platform/dalvik" />
+  <project path="developers/samples/android" name="platform/developers/samples/android" />
+  <project path="development" name="platform/development" />
+  <project path="external/aac" name="platform/external/aac" />
+  <project path="external/boringssl" name="platform/external/boringssl" />
+  <project path="external/conscrypt" name="platform/external/conscrypt" />
+  <project path="external/curl" name="platform/external/curl" />
+  <project path="external/e2fsprogs" name="platform/external/e2fsprogs" />
+  <project path="external/expat" name="platform/external/expat" />
+  <project path="external/f2fs-tools" name="platform/external/f2fs-tools" />
+  <project path="external/flac" name="platform/external/flac" />
+  <project path="external/freetype" name="platform/external/freetype" />
+  <project path="external/giflib" name="platform/external/giflib" />
+  <project path="external/harfbuzz_ng" name="platform/external/harfbuzz_ng" />
+  <project path="external/icu" name="platform/external/icu" />
+  <project path="external/jpeg" name="platform/external/jpeg" />
+  <project path="external/jsoncpp" name="platform/external/jsoncpp" />
+  <project path="external/libcxx" name="platform/external/libcxx" />
+  <project path="external/libcxxabi" name="platform/external/libcxxabi" />
+  <project path="external/libnl" name="platform/external/libnl" />
+  <project path="external/libpng" name="platform/external/libpng" />
+  <project path="external/libvpx" name="platform/external/libvpx" />
+  <project path="external/lz4" name="platform/external/lz4" />
+  <project path="external/mesa3d" name="platform/external/mesa3d" />
+  <project path="external/minijail" name="platform/external/minijail" />
+  <project path="external/mksh" name="platform/external/mksh" />
+  <project path="external/okhttp" name="platform/external/okhttp" />
+  <project path="external/openssl" name="platform/external/openssl" />
+  <project path="external/opusfile" name="platform/external/opusfile" />
+  <project path="external/pcre" name="platform/external/pcre" />
+  <project path="external/protobuf" name="platform/external/protobuf" />
+  <project path="external/selinux" name="platform/external/selinux" />
+  <project path="external/skia" name="platform/external/skia" />
+  <project path="external/sqlite" name="platform/external/sqlite" />
+  <project path="external/tinyalsa" name="platform/external/tinyalsa" />
+  <project path="external/tremolo" name="platform/external/tremolo" />
+  <project path="external/vorbis" name="platform/external/vorbis" />
+  <project path="external/webp" name="platform/external/webp" />
+  <project path="external/wpa_supplicant_8" name="platform/external/wpa_supplicant_8" />
+  <project path="external/zlib" name="platform/external/zlib" />
+  <project path="external/zstd" name="platform/external/zstd" />
+  <project path="frameworks/av" name="platform/frameworks/av" />
+  <project path="frameworks/base" name="platform/frameworks/base" remote="rivergod" revision="13" />
+  <project path="frameworks/libs/net" name="platform/frameworks/libs/net" />
+  <project path="frameworks/native" name="platform/frameworks/native" />
+  <project path="frameworks/opt/net/wifi" name="platform/frameworks/opt/net/wifi" />
+  <project path="hardware/interfaces" name="platform/hardware/interfaces" />
+  <project path="hardware/libhardware" name="platform/hardware/libhardware" />
+  <project path="hardware/libhardware_legacy" name="platform/hardware/libhardware_legacy" />
+  <project path="hardware/ril" name="platform/hardware/ril" />
+  <project path="kernel/configs" name="platform/kernel/configs" />
+  <project path="libcore" name="platform/libcore" />
+  <project path="libnativehelper" name="platform/libnativehelper" />
+  <project path="packages/apps/Bluetooth" name="platform/packages/apps/Bluetooth" />
+  <project path="packages/apps/Browser2" name="platform/packages/apps/Browser2" />
+  <project path="packages/apps/Calendar" name="platform/packages/apps/Calendar" />
+  <project path="packages/apps/Camera2" name="platform/packages/apps/Camera2" />
+  <project path="packages/apps/Contacts" name="platform/packages/apps/Contacts" />
+  <project path="packages/apps/DeskClock" name="platform/packages/apps/DeskClock" />
+  <project path="packages/apps/Dialer" name="platform/packages/apps/Dialer" />
+  <project path="packages/apps/DocumentsUI" name="platform/packages/apps/DocumentsUI" />
+  <project path="packages/apps/Email" name="platform/packages/apps/Email" />
+  <project path="packages/apps/Gallery2" name="platform/packages/apps/Gallery2" />
+  <project path="packages/apps/KeyChain" name="platform/packages/apps/KeyChain" />
+  <project path="packages/apps/Launcher3" name="platform/packages/apps/Launcher3" remote="rivergod" revision="13" />
+  <project path="packages/apps/Messaging" name="platform/packages/apps/Messaging" />
+  <project path="packages/apps/MusicFX" name="platform/packages/apps/MusicFX" />
+  <project path="packages/apps/Nfc" name="platform/packages/apps/Nfc" />
+  <project path="packages/apps/Phone" name="platform/packages/apps/Phone" />
+  <project path="packages/apps/Settings" name="platform/packages/apps/Settings" remote="rivergod" revision="13" />
+  <project path="packages/apps/StorageManager" name="platform/packages/apps/StorageManager" />
+  <project path="packages/apps/Tag" name="platform/packages/apps/Tag" />
+  <project path="packages/modules/NetworkStack" name="platform/packages/modules/NetworkStack" />
+  <project path="packages/providers/CalendarProvider" name="platform/packages/providers/CalendarProvider" />
+  <project path="packages/providers/ContactsProvider" name="platform/packages/providers/ContactsProvider" />
+  <project path="packages/providers/DownloadProvider" name="platform/packages/providers/DownloadProvider" />
+  <project path="packages/providers/MediaProvider" name="platform/packages/providers/MediaProvider" />
+  <project path="packages/providers/TelephonyProvider" name="platform/packages/providers/TelephonyProvider" />
+  <project path="packages/services/Telecomm" name="platform/packages/services/Telecomm" />
+  <project path="packages/services/Telephony" name="platform/packages/services/Telephony" />
+  <project path="prebuilts/abi-dumps/ndk" name="platform/prebuilts/abi-dumps/ndk" />
+  <project path="prebuilts/clang/host/linux-x86" name="platform/prebuilts/clang/host/linux-x86" />
+  <project path="prebuilts/gcc/linux-x86/aarch64/aarch64-linux-android-4.9" name="platform/prebuilts/gcc/linux-x86/aarch64/aarch64-linux-android-4.9" />
+  <project path="prebuilts/gcc/linux-x86/arm/arm-linux-androideabi-4.9" name="platform/prebuilts/gcc/linux-x86/arm/arm-linux-androideabi-4.9" />
+  <project path="prebuilts/go/linux-x86" name="platform/prebuilts/go/linux-x86" />
+  <project path="prebuilts/misc" name="platform/prebuilts/misc" />
+  <project path="prebuilts/tools" name="platform/prebuilts/tools" />
+  <project path="sdk" name="platform/sdk" />
+  <project path="system/bt" name="platform/system/bt" />
+  <project path="system/ca-certificates" name="platform/system/ca-certificates" />
+  <project path="system/core" name="platform/system/core" />
+  <project path="system/extras" name="platform/system/extras" />
+  <project path="system/hardware/interfaces" name="platform/system/hardware/interfaces" />
+  <project path="system/libbase" name="platform/system/libbase" />
+  <project path="system/libfmq" name="platform/system/libfmq" />
+  <project path="system/libhidl" name="platform/system/libhidl" />
+  <project path="system/libhwbinder" name="platform/system/libhwbinder" />
+  <project path="system/libvintf" name="platform/system/libvintf" />
+  <project path="system/media" name="platform/system/media" />
+  <project path="system/netd" name="platform/system/netd" />
+  <project path="system/security" name="platform/system/security" />
+  <project path="system/sepolicy" name="platform/system/sepolicy" />
+  <project path="system/timezone" name="platform/system/timezone" />
+  <project path="system/tools/hidl" name="platform/system/tools/hidl" />
+  <project path="system/unwinding" name="platform/system/unwinding" />
+  <project path="tools/apksig" name="platform/tools/apksig" />
+  <project path="tools/base" name="platform/tools/base" />
+  <project path="tools/dexter" name="platform/tools/dexter" />
+  <project path="tools/metalava" name="platform/tools/metalava" />
+
+  <!-- ===================== LINEAGEOS (для поддержки устройств) ===================== -->
+  <project path="hardware/lineage/interfaces" name="android_hardware_lineage_interfaces" remote="lineage" revision="lineage-20.0" />
+  <project path="hardware/qcom-caf/msm8998/audio" name="android_hardware_qcom_audio" remote="lineage" revision="lineage-20.0-caf-8998" />
+  <project path="vendor/lineage" name="android_vendor_lineage" remote="lineage" revision="lineage-20.0" />
+
+  <!-- ===================== QUALCOMM / QCOM (Snapdragon 855) ===================== -->
+  <project path="device/qcom/sepolicy_vndr" name="android_device_qcom_sepolicy_vndr" remote="lineage" revision="lineage-20.0" />
+  <project path="hardware/qcom-caf/common" name="android_hardware_qcom_common" remote="lineage" revision="lineage-20.0" />
+
+  <!-- ===================== DEVICE TREE (raphael) ===================== -->
+  <project path="device/xiaomi/raphael" name="android_device_xiaomi_raphael" remote="rivergod" revision="13" />
+  <project path="device/xiaomi/sm8150-common" name="android_device_xiaomi_sm8150-common" remote="lineage" revision="lineage-20.0" />
+  <project path="kernel/xiaomi/raphael" name="android_kernel_xiaomi_raphael" remote="rivergod" revision="rivergod-13" />
+
+  <!-- ===================== VENDOR BLOBS (raphael) ===================== -->
+  <project path="vendor/xiaomi/raphael" name="proprietary_vendor_xiaomi_raphael" remote="rivergod" revision="13" clone-depth="1" />
+
+  <!-- ===================== RIVERGOD OS CUSTOM ===================== -->
+  <!-- Vendor config (product definitions, branding, configs) -->
+  <project path="vendor/rivergod" name="vendor_rivergod" remote="rivergod" revision="13" />
+
+  <!-- RiverGod Settings app (своё приложение настроек) -->
+  <project path="packages/apps/RiverGodSettings" name="packages_apps_RiverGodSettings" remote="rivergod" revision="13" />
+
+  <!-- RiverGod Launcher -->
+  <project path="packages/apps/RiverGodLauncher" name="packages_apps_RiverGodLauncher" remote="rivergod" revision="13" />
+
+  <!-- RiverGod Themes / Overlays -->
+  <project path="packages/overlays/RiverGodTheme" name="packages_overlays_RiverGodTheme" remote="rivergod" revision="13" />
+
+</manifest>
