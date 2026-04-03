@@ -2,7 +2,8 @@
 <manifest>
 
   <remote name="lineage"
-          fetch="https://github.com/LineageOS"/>
+          fetch="https://github.com/LineageOS"
+          review="https://review.lineageos.org"/>
 
   <remote name="github"
           fetch="https://github.com"/>
@@ -10,104 +11,116 @@
   <remote name="rivergod"
           fetch="https://github.com/RiverGodOS"/>
 
-  <default revision="lineage-20.0"
+  <default revision="refs/heads/lineage-20.0"
            remote="lineage"
            sync-j="4"
            sync-c="true"/>
 
-  <project path="build/make"           name="android_build"                  revision="lineage-20.0"/>
-  <project path="build/blueprint"      name="android_build_blueprint"        revision="lineage-20.0"/>
-  <project path="build/kati"           name="android_build_kati"             revision="lineage-20.0"/>
-  <project path="build/soong"          name="android_build_soong"            revision="lineage-20.0"/>
-  <project path="bionic"               name="android_bionic"                 revision="lineage-20.0"/>
-  <project path="art"                  name="android_art"                    revision="lineage-20.0"/>
-  <project path="dalvik"               name="android_dalvik"                 revision="lineage-20.0"/>
-  <project path="libcore"              name="android_libcore"                revision="lineage-20.0"/>
-  <project path="libnativehelper"      name="android_libnativehelper"        revision="lineage-20.0"/>
-  <project path="development"          name="android_development"            revision="lineage-20.0"/>
-  <project path="frameworks/av"        name="android_frameworks_av"          revision="lineage-20.0"/>
-  <project path="frameworks/base"      name="android_frameworks_base"        revision="lineage-20.0"/>
-  <project path="frameworks/native"    name="android_frameworks_native"      revision="lineage-20.0"/>
-  <project path="system/core"          name="android_system_core"            revision="lineage-20.0"/>
-  <project path="system/extras"        name="android_system_extras"          revision="lineage-20.0"/>
-  <project path="system/libbase"       name="android_system_libbase"         revision="lineage-20.0"/>
-  <project path="system/media"         name="android_system_media"           revision="lineage-20.0"/>
-  <project path="system/netd"          name="android_system_netd"            revision="lineage-20.0"/>
-  <project path="system/security"      name="android_system_security"        revision="lineage-20.0"/>
-  <project path="system/sepolicy"      name="android_system_sepolicy"        revision="lineage-20.0"/>
-  <project path="system/timezone"      name="android_system_timezone"        revision="lineage-20.0"/>
-  <project path="hardware/interfaces"  name="android_hardware_interfaces"    revision="lineage-20.0"/>
-  <project path="hardware/libhardware" name="android_hardware_libhardware"   revision="lineage-20.0"/>
-  <project path="hardware/libhardware_legacy" name="android_hardware_libhardware_legacy" revision="lineage-20.0"/>
-  <project path="hardware/ril"         name="android_hardware_ril"           revision="lineage-20.0"/>
-  <project path="hardware/lineage/interfaces" name="android_hardware_lineage_interfaces" revision="lineage-20.0"/>
-  <project path="external/aac"         name="android_external_aac"          revision="lineage-20.0"/>
-  <project path="external/boringssl"   name="android_external_boringssl"    revision="lineage-20.0"/>
-  <project path="external/conscrypt"   name="android_external_conscrypt"    revision="lineage-20.0"/>
-  <project path="external/curl"        name="android_external_curl"         revision="lineage-20.0"/>
-  <project path="external/e2fsprogs"   name="android_external_e2fsprogs"    revision="lineage-20.0"/>
-  <project path="external/f2fs-tools"  name="android_external_f2fs-tools"   revision="lineage-20.0"/>
-  <project path="external/flac"        name="android_external_flac"         revision="lineage-20.0"/>
-  <project path="external/freetype"    name="android_external_freetype"     revision="lineage-20.0"/>
-  <project path="external/harfbuzz_ng" name="android_external_harfbuzz_ng"  revision="lineage-20.0"/>
-  <project path="external/icu"         name="android_external_icu"          revision="lineage-20.0"/>
-  <project path="external/jsoncpp"     name="android_external_jsoncpp"      revision="lineage-20.0"/>
-  <project path="external/libcxx"      name="android_external_libcxx"       revision="lineage-20.0"/>
-  <project path="external/libpng"      name="android_external_libpng"       revision="lineage-20.0"/>
-  <project path="external/libvpx"      name="android_external_libvpx"       revision="lineage-20.0"/>
-  <project path="external/lz4"         name="android_external_lz4"          revision="lineage-20.0"/>
-  <project path="external/minijail"    name="android_external_minijail"     revision="lineage-20.0"/>
-  <project path="external/mksh"        name="android_external_mksh"         revision="lineage-20.0"/>
-  <project path="external/pcre"        name="android_external_pcre"         revision="lineage-20.0"/>
-  <project path="external/protobuf"    name="android_external_protobuf"     revision="lineage-20.0"/>
-  <project path="external/selinux"     name="android_external_selinux"      revision="lineage-20.0"/>
-  <project path="external/skia"        name="android_external_skia"         revision="lineage-20.0"/>
-  <project path="external/sqlite"      name="android_external_sqlite"       revision="lineage-20.0"/>
-  <project path="external/tinyalsa"    name="android_external_tinyalsa"     revision="lineage-20.0"/>
-  <project path="external/webp"        name="android_external_webp"         revision="lineage-20.0"/>
-  <project path="external/wpa_supplicant_8" name="android_external_wpa_supplicant_8" revision="lineage-20.0"/>
-  <project path="external/zlib"        name="android_external_zlib"         revision="lineage-20.0"/>
-  <project path="external/zstd"        name="android_external_zstd"         revision="lineage-20.0"/>
-  <project path="packages/apps/Bluetooth"      name="android_packages_apps_Bluetooth"      revision="lineage-20.0"/>
-  <project path="packages/apps/Calendar"       name="android_packages_apps_Calendar"       revision="lineage-20.0"/>
-  <project path="packages/apps/Camera2"        name="android_packages_apps_Camera2"        revision="lineage-20.0"/>
-  <project path="packages/apps/Contacts"       name="android_packages_apps_Contacts"       revision="lineage-20.0"/>
-  <project path="packages/apps/DeskClock"      name="android_packages_apps_DeskClock"      revision="lineage-20.0"/>
-  <project path="packages/apps/DocumentsUI"    name="android_packages_apps_DocumentsUI"    revision="lineage-20.0"/>
-  <project path="packages/apps/Gallery2"       name="android_packages_apps_Gallery2"       revision="lineage-20.0"/>
-  <project path="packages/apps/Messaging"      name="android_packages_apps_Messaging"      revision="lineage-20.0"/>
-  <project path="packages/apps/Nfc"            name="android_packages_apps_Nfc"            revision="lineage-20.0"/>
-  <project path="packages/apps/StorageManager" name="android_packages_apps_StorageManager" revision="lineage-20.0"/>
-  <project path="packages/providers/CalendarProvider"  name="android_packages_providers_CalendarProvider"  revision="lineage-20.0"/>
-  <project path="packages/providers/ContactsProvider"  name="android_packages_providers_ContactsProvider"  revision="lineage-20.0"/>
-  <project path="packages/providers/DownloadProvider"  name="android_packages_providers_DownloadProvider"  revision="lineage-20.0"/>
-  <project path="packages/providers/MediaProvider"     name="android_packages_providers_MediaProvider"     revision="lineage-20.0"/>
-  <project path="packages/providers/TelephonyProvider" name="android_packages_providers_TelephonyProvider" revision="lineage-20.0"/>
-  <project path="packages/services/Telecomm"   name="android_packages_services_Telecomm"   revision="lineage-20.0"/>
-  <project path="packages/services/Telephony"  name="android_packages_services_Telephony"  revision="lineage-20.0"/>
-  <project path="prebuilts/clang/host/linux-x86" name="android_prebuilts_clang_host_linux-x86" revision="lineage-20.0" clone-depth="1"/>
-  <project path="prebuilts/gcc/linux-x86/aarch64/aarch64-linux-android-4.9" name="android_prebuilts_gcc_linux-x86_aarch64_aarch64-linux-android-4.9" revision="lineage-20.0" clone-depth="1"/>
-  <project path="prebuilts/gcc/linux-x86/arm/arm-linux-androideabi-4.9" name="android_prebuilts_gcc_linux-x86_arm_arm-linux-androideabi-4.9" revision="lineage-20.0" clone-depth="1"/>
-  <project path="prebuilts/misc" name="android_prebuilts_misc" revision="lineage-20.0" clone-depth="1"/>
-  <project path="vendor/lineage" name="android_vendor_lineage" revision="lineage-20.0"/>
-  <project path="device/qcom/sepolicy_vndr" name="android_device_qcom_sepolicy_vndr" revision="lineage-20.0"/>
-  <project path="hardware/qcom-caf/common" name="android_hardware_qcom_common" revision="lineage-20.0"/>
-  <project path="device/xiaomi/raphael" name="android_device_xiaomi_raphael" remote="github" revision="lineage-20.0" clone-depth="1"/>
-  <project path="device/xiaomi/sm8150-common" name="android_device_xiaomi_sm8150-common" remote="github" revision="lineage-20.0" clone-depth="1"/>
-  <project path="kernel/xiaomi/raphael" name="android_kernel_xiaomi_raphael" remote="github" revision="lineage-20.0" clone-depth="1"/>
-  <project path="vendor/xiaomi/raphael" name="proprietary_vendor_xiaomi_raphael" remote="github" revision="lineage-20.0" clone-depth="1"/>
-  <project path="vendor/rivergod" name="vendor_rivergod" remote="rivergod" revision="13"/>
-  <project path="packages/apps/RiverGodLauncher" name="packages_apps_RiverGodLauncher" remote="rivergod" revision="13"/>
-  <project path="packages/apps/RiverGodSettings" name="packages_apps_RiverGodSettings" remote="rivergod" revision="13"/>
-  <project path="packages/apps/RiverGodSystemUI" name="packages_apps_RiverGodSystemUI" remote="rivergod" revision="13"/>
-  <project path="packages/apps/RiverGodBrowser" name="packages_apps_RiverGodBrowser" remote="rivergod" revision="13"/>
-  <project path="packages/apps/RiverGodKeyboard" name="packages_apps_RiverGodKeyboard" remote="rivergod" revision="13"/>
-  <project path="packages/apps/RiverGodRecovery" name="packages_apps_RiverGodRecovery" remote="rivergod" revision="13"/>
-  <project path="packages/apps/RiverGodOTA" name="packages_apps_RiverGodOTA" remote="rivergod" revision="13"/>
-  <project path="packages/apps/RiverGodInstaller" name="packages_apps_RiverGodInstaller" remote="rivergod" revision="13"/>
-  <project path="packages/apps/RiverGodStore" name="packages_apps_RiverGodStore" remote="rivergod" revision="13"/>
-  <project path="packages/apps/RiverGodDialer" name="packages_apps_RiverGodDialer" remote="rivergod" revision="13"/>
-  <project path="packages/apps/RiverGodCalculator" name="packages_apps_RiverGodCalculator" remote="rivergod" revision="13"/>
-  <project path="packages/apps/RiverGodClock" name="packages_apps_RiverGodClock" remote="rivergod" revision="13"/>
+  <project path="build/make"           name="android_build"                  revision="refs/heads/lineage-20.0"/>
+  <project path="build/blueprint"      name="android_build_blueprint"        revision="refs/heads/lineage-20.0"/>
+  <project path="build/kati"           name="android_build_kati"             revision="refs/heads/lineage-20.0"/>
+  <project path="build/soong"          name="android_build_soong"            revision="refs/heads/lineage-20.0"/>
+  <project path="art"                  name="android_art"                    revision="refs/heads/lineage-20.0"/>
+  <project path="bionic"               name="android_bionic"                 revision="refs/heads/lineage-20.0"/>
+  <project path="dalvik"               name="android_dalvik"                 revision="refs/heads/lineage-20.0"/>
+  <project path="libcore"              name="android_libcore"                revision="refs/heads/lineage-20.0"/>
+  <project path="libnativehelper"      name="android_libnativehelper"        revision="refs/heads/lineage-20.0"/>
+  <project path="development"          name="android_development"            revision="refs/heads/lineage-20.0"/>
+  <project path="frameworks/av"        name="android_frameworks_av"          revision="refs/heads/lineage-20.0"/>
+  <project path="frameworks/base"      name="android_frameworks_base"        revision="refs/heads/lineage-20.0"/>
+  <project path="frameworks/native"    name="android_frameworks_native"      revision="refs/heads/lineage-20.0"/>
+  <project path="frameworks/libs/net"  name="android_frameworks_libs_net"    revision="refs/heads/lineage-20.0"/>
+  <project path="frameworks/opt/net/wifi" name="android_frameworks_opt_net_wifi" revision="refs/heads/lineage-20.0"/>
+  <project path="system/core"          name="android_system_core"            revision="refs/heads/lineage-20.0"/>
+  <project path="system/extras"        name="android_system_extras"          revision="refs/heads/lineage-20.0"/>
+  <project path="system/libbase"       name="android_system_libbase"         revision="refs/heads/lineage-20.0"/>
+  <project path="system/libfmq"        name="android_system_libfmq"          revision="refs/heads/lineage-20.0"/>
+  <project path="system/libhidl"       name="android_system_libhidl"         revision="refs/heads/lineage-20.0"/>
+  <project path="system/libvintf"      name="android_system_libvintf"        revision="refs/heads/lineage-20.0"/>
+  <project path="system/media"         name="android_system_media"           revision="refs/heads/lineage-20.0"/>
+  <project path="system/netd"          name="android_system_netd"            revision="refs/heads/lineage-20.0"/>
+  <project path="system/security"      name="android_system_security"        revision="refs/heads/lineage-20.0"/>
+  <project path="system/sepolicy"      name="android_system_sepolicy"        revision="refs/heads/lineage-20.0"/>
+  <project path="system/timezone"      name="android_system_timezone"        revision="refs/heads/lineage-20.0"/>
+  <project path="system/tools/hidl"    name="android_system_tools_hidl"      revision="refs/heads/lineage-20.0"/>
+  <project path="system/unwinding"     name="android_system_unwinding"       revision="refs/heads/lineage-20.0"/>
+  <project path="hardware/interfaces"  name="android_hardware_interfaces"    revision="refs/heads/lineage-20.0"/>
+  <project path="hardware/libhardware" name="android_hardware_libhardware"   revision="refs/heads/lineage-20.0"/>
+  <project path="hardware/libhardware_legacy" name="android_hardware_libhardware_legacy" revision="refs/heads/lineage-20.0"/>
+  <project path="hardware/ril"         name="android_hardware_ril"           revision="refs/heads/lineage-20.0"/>
+  <project path="hardware/lineage/interfaces" name="android_hardware_lineage_interfaces" revision="refs/heads/lineage-20.0"/>
+  <project path="external/aac"         name="android_external_aac"           revision="refs/heads/lineage-20.0"/>
+  <project path="external/boringssl"   name="android_external_boringssl"     revision="refs/heads/lineage-20.0"/>
+  <project path="external/conscrypt"   name="android_external_conscrypt"     revision="refs/heads/lineage-20.0"/>
+  <project path="external/curl"        name="android_external_curl"          revision="refs/heads/lineage-20.0"/>
+  <project path="external/e2fsprogs"   name="android_external_e2fsprogs"     revision="refs/heads/lineage-20.0"/>
+  <project path="external/f2fs-tools"  name="android_external_f2fs-tools"    revision="refs/heads/lineage-20.0"/>
+  <project path="external/flac"        name="android_external_flac"          revision="refs/heads/lineage-20.0"/>
+  <project path="external/freetype"    name="android_external_freetype"      revision="refs/heads/lineage-20.0"/>
+  <project path="external/harfbuzz_ng" name="android_external_harfbuzz_ng"   revision="refs/heads/lineage-20.0"/>
+  <project path="external/icu"         name="android_external_icu"           revision="refs/heads/lineage-20.0"/>
+  <project path="external/jsoncpp"     name="android_external_jsoncpp"       revision="refs/heads/lineage-20.0"/>
+  <project path="external/libcxx"      name="android_external_libcxx"        revision="refs/heads/lineage-20.0"/>
+  <project path="external/libcxxabi"   name="android_external_libcxxabi"     revision="refs/heads/lineage-20.0"/>
+  <project path="external/libnl"       name="android_external_libnl"         revision="refs/heads/lineage-20.0"/>
+  <project path="external/libpng"      name="android_external_libpng"        revision="refs/heads/lineage-20.0"/>
+  <project path="external/libvpx"      name="android_external_libvpx"        revision="refs/heads/lineage-20.0"/>
+  <project path="external/lz4"         name="android_external_lz4"           revision="refs/heads/lineage-20.0"/>
+  <project path="external/minijail"    name="android_external_minijail"      revision="refs/heads/lineage-20.0"/>
+  <project path="external/mksh"        name="android_external_mksh"          revision="refs/heads/lineage-20.0"/>
+  <project path="external/okhttp"      name="android_external_okhttp"        revision="refs/heads/lineage-20.0"/>
+  <project path="external/pcre"        name="android_external_pcre"          revision="refs/heads/lineage-20.0"/>
+  <project path="external/protobuf"    name="android_external_protobuf"      revision="refs/heads/lineage-20.0"/>
+  <project path="external/selinux"     name="android_external_selinux"       revision="refs/heads/lineage-20.0"/>
+  <project path="external/skia"        name="android_external_skia"          revision="refs/heads/lineage-20.0"/>
+  <project path="external/sqlite"      name="android_external_sqlite"        revision="refs/heads/lineage-20.0"/>
+  <project path="external/tinyalsa"    name="android_external_tinyalsa"      revision="refs/heads/lineage-20.0"/>
+  <project path="external/webp"        name="android_external_webp"          revision="refs/heads/lineage-20.0"/>
+  <project path="external/wpa_supplicant_8" name="android_external_wpa_supplicant_8" revision="refs/heads/lineage-20.0"/>
+  <project path="external/zlib"        name="android_external_zlib"          revision="refs/heads/lineage-20.0"/>
+  <project path="external/zstd"        name="android_external_zstd"          revision="refs/heads/lineage-20.0"/>
+  <project path="packages/apps/Bluetooth"      name="android_packages_apps_Bluetooth"      revision="refs/heads/lineage-20.0"/>
+  <project path="packages/apps/Calendar"       name="android_packages_apps_Calendar"       revision="refs/heads/lineage-20.0"/>
+  <project path="packages/apps/Camera2"        name="android_packages_apps_Camera2"        revision="refs/heads/lineage-20.0"/>
+  <project path="packages/apps/Contacts"       name="android_packages_apps_Contacts"       revision="refs/heads/lineage-20.0"/>
+  <project path="packages/apps/DeskClock"      name="android_packages_apps_DeskClock"      revision="refs/heads/lineage-20.0"/>
+  <project path="packages/apps/DocumentsUI"    name="android_packages_apps_DocumentsUI"    revision="refs/heads/lineage-20.0"/>
+  <project path="packages/apps/Gallery2"       name="android_packages_apps_Gallery2"       revision="refs/heads/lineage-20.0"/>
+  <project path="packages/apps/Messaging"      name="android_packages_apps_Messaging"      revision="refs/heads/lineage-20.0"/>
+  <project path="packages/apps/Nfc"            name="android_packages_apps_Nfc"            revision="refs/heads/lineage-20.0"/>
+  <project path="packages/apps/StorageManager" name="android_packages_apps_StorageManager" revision="refs/heads/lineage-20.0"/>
+  <project path="packages/apps/Tag"            name="android_packages_apps_Tag"            revision="refs/heads/lineage-20.0"/>
+  <project path="packages/providers/CalendarProvider"  name="android_packages_providers_CalendarProvider"  revision="refs/heads/lineage-20.0"/>
+  <project path="packages/providers/ContactsProvider"  name="android_packages_providers_ContactsProvider"  revision="refs/heads/lineage-20.0"/>
+  <project path="packages/providers/DownloadProvider"  name="android_packages_providers_DownloadProvider"  revision="refs/heads/lineage-20.0"/>
+  <project path="packages/providers/MediaProvider"     name="android_packages_providers_MediaProvider"     revision="refs/heads/lineage-20.0"/>
+  <project path="packages/providers/TelephonyProvider" name="android_packages_providers_TelephonyProvider" revision="refs/heads/lineage-20.0"/>
+  <project path="packages/services/Telecomm"   name="android_packages_services_Telecomm"   revision="refs/heads/lineage-20.0"/>
+  <project path="packages/services/Telephony"  name="android_packages_services_Telephony"  revision="refs/heads/lineage-20.0"/>
+  <project path="packages/modules/NetworkStack" name="android_packages_modules_NetworkStack" revision="refs/heads/lineage-20.0"/>
+  <project path="prebuilts/clang/host/linux-x86" name="android_prebuilts_clang_host_linux-x86" revision="refs/heads/lineage-20.0" clone-depth="1"/>
+  <project path="prebuilts/gcc/linux-x86/aarch64/aarch64-linux-android-4.9" name="android_prebuilts_gcc_linux-x86_aarch64_aarch64-linux-android-4.9" revision="refs/heads/lineage-20.0" clone-depth="1"/>
+  <project path="prebuilts/gcc/linux-x86/arm/arm-linux-androideabi-4.9" name="android_prebuilts_gcc_linux-x86_arm_arm-linux-androideabi-4.9" revision="refs/heads/lineage-20.0" clone-depth="1"/>
+  <project path="prebuilts/misc"               name="android_prebuilts_misc"               revision="refs/heads/lineage-20.0" clone-depth="1"/>
+  <project path="vendor/lineage"               name="android_vendor_lineage"               revision="refs/heads/lineage-20.0"/>
+  <project path="device/qcom/sepolicy_vndr"    name="android_device_qcom_sepolicy_vndr"    revision="refs/heads/lineage-20.0"/>
+  <project path="hardware/qcom-caf/common"     name="android_hardware_qcom_common"         revision="refs/heads/lineage-20.0"/>
+  <project path="device/xiaomi/raphael"        name="android_device_xiaomi_raphael"        revision="refs/heads/lineage-20.0" clone-depth="1"/>
+  <project path="device/xiaomi/sm8150-common"  name="android_device_xiaomi_sm8150-common"  revision="refs/heads/lineage-20.0" clone-depth="1"/>
+  <project path="kernel/xiaomi/raphael"        name="android_kernel_xiaomi_raphael"        revision="refs/heads/lineage-20.0" clone-depth="1"/>
+  <project path="vendor/xiaomi/raphael"        name="proprietary_vendor_xiaomi_raphael"    remote="github" revision="refs/heads/lineage-20.0" clone-depth="1"/>
+  <project path="vendor/rivergod"              name="vendor_rivergod"                      remote="rivergod" revision="refs/heads/13"/>
+  <project path="packages/apps/RiverGodLauncher"   name="packages_apps_RiverGodLauncher"   remote="rivergod" revision="refs/heads/13"/>
+  <project path="packages/apps/RiverGodSettings"   name="packages_apps_RiverGodSettings"   remote="rivergod" revision="refs/heads/13"/>
+  <project path="packages/apps/RiverGodSystemUI"   name="packages_apps_RiverGodSystemUI"   remote="rivergod" revision="refs/heads/13"/>
+  <project path="packages/apps/RiverGodBrowser"    name="packages_apps_RiverGodBrowser"    remote="rivergod" revision="refs/heads/13"/>
+  <project path="packages/apps/RiverGodKeyboard"   name="packages_apps_RiverGodKeyboard"   remote="rivergod" revision="refs/heads/13"/>
+  <project path="packages/apps/RiverGodRecovery"   name="packages_apps_RiverGodRecovery"   remote="rivergod" revision="refs/heads/13"/>
+  <project path="packages/apps/RiverGodOTA"        name="packages_apps_RiverGodOTA"        remote="rivergod" revision="refs/heads/13"/>
+  <project path="packages/apps/RiverGodInstaller"  name="packages_apps_RiverGodInstaller"  remote="rivergod" revision="refs/heads/13"/>
+  <project path="packages/apps/RiverGodStore"      name="packages_apps_RiverGodStore"      remote="rivergod" revision="refs/heads/13"/>
+  <project path="packages/apps/RiverGodDialer"     name="packages_apps_RiverGodDialer"     remote="rivergod" revision="refs/heads/13"/>
+  <project path="packages/apps/RiverGodCalculator" name="packages_apps_RiverGodCalculator" remote="rivergod" revision="refs/heads/13"/>
+  <project path="packages/apps/RiverGodClock"      name="packages_apps_RiverGodClock"      remote="rivergod" revision="refs/heads/13"/>
 
 </manifest>
